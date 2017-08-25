@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.material.theme.css" />
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.mobile.js"></script>
+    </head>
+    <body>
+      <div data-role="page" >
+        <div data-role="panel" data-display="push" id="sidebar">
+          <ul data-role="listview">
+            <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+            <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+            <li data-icon="false"><a data-ajax="false" href="../custom/version.html">Version 1.0.1</a></li>
+          </ul>
+        </div>
+
+        <div data-role="header" data-theme="d" data-tap-toggle="false">
+          <a href="#sidebar" class="ui-btn-left ui-btn ui-icon-md-menu ui-btn-icon-notext"></a>
+          <h1 class="header-title">Selects</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-padding">
+            <h3>Selects</h3>
+          </div>
+
+          <ul data-role="listview">
+            <li data-role="fieldcontain">
+              <label>Select</label>
+              <select
+                data-native-menu="true"
+                data-corners="false"
+                data-mini="true"
+                data-shadow="false">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+              </select>
+            </li>
+            <li data-role="fieldcontain">
+              <label>Multiple Select</label>
+              <select
+                data-native-menu="false"
+                multiple="multiple"
+                data-corners="false"
+                data-mini="true"
+                data-shadow="false"
+                data-close-text="">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+              </select>
+            </li>
+            <li data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                <legend>Checkboxes</legend>
+                <input type="checkbox" id="ch1" checked="" data-theme="b">
+                <label class="material-checkbox ui-icon-md-check" for="ch1">One</label>
+                <input type="checkbox" id="ch2">
+                <label class="material-checkbox ui-icon-md-check" for="ch2">Two</label>
+                <input type="checkbox" id="ch3">
+                <label class="material-checkbox ui-icon-md-check" for="ch3">Three</label>
+              </fieldset>
+            </li>
+
+            <li data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <legend>Checkboxes</legend>
+                <input type="checkbox" id="ch4" checked="">
+                <label for="ch4">One</label>
+                <input type="checkbox" id="ch5">
+                <label for="ch5">Two</label>
+                <input type="checkbox" id="ch6">
+                <label for="ch6">Three</label>
+              </fieldset>
+            </li>
+            <li data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                <legend>Radio Buttons</legend>
+                <input type="radio" id="radio1" name="radio1" checked="checked">
+                <label class="material-radio ui-icon-md-check" for="radio1">One</label>
+                <input type="radio" id="radio2" name="radio1" data-theme="c">
+                <label class="material-radio ui-icon-md-check" for="radio2">Two</label>
+                <input type="radio" id="radio3" name="radio1">
+                <label class="material-radio ui-icon-md-check" for="radio3">Three</label>
+              </fieldset>
+            </li>
+            <li data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" data-corners="false">
+                <legend>Radio Buttons</legend>
+                <input type="radio" name="radio2" id="radio4" checked="checked">
+                <label for="radio4">Only</label>
+                <input type="radio" name="radio2" id="radio5">
+                <label for="radio5">One</label>
+                <input type="radio" name="radio2" id="radio6">
+                <label for="radio6">Selected</label>
+              </fieldset>
+            </li>
+          </ul>
+          <br />
+        </div>
+        <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+          <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,29 +1,123 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="theme/jqm-material-theme/css/jquery.mobile.material.theme.css" rel="stylesheet" type="text/css">
     <!--
-        視需要在下方的中繼標籤中自訂內容安全性原則。將 'unsafe-inline' 加入 default-src 以啟用內嵌 JavaScript。
-        如需詳細資料，請參閱 http://go.microsoft.com/fwlink/?LinkID=617521
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>MultiPageApp</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">正在連接到裝置</p>
-                <p class="event received">裝置已就緒</p>
-            </div>
+    <script type="text/javascript" src="scripts/vendors/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="scripts/vendors/jquery.mobile-1.4.5.min.js"></script>
+    <title>MultiPageApp</title>
+</head>
+<body>
+    <div data-role="page" id="Blank"></div>
+    <!-- ================================================== -->
+    <div data-role="page" id="INSTALL">
+        <div data-role="header" data-theme="c">
+            <h1 id="INSTALL-Header">MultiPageApp</h1>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+        <div data-role="content" style="padding: 15px">
+            <br>
+            <br>
+            <a data-role="button" data-theme="c" data-transition="none" href="#SIGNIN" id="INSTALL_SIGNIN_BUTTON">登入</a>
+            <a data-role="button" data-theme="c" data-transition="none" href="#SIGNUP" id="INSTALL_SIGNUP_BUTTON">註冊</a>
+        </div>
+    </div>
+    <!-- ================================================== -->
+    <div data-role="page" id="SIGNIN">
+        <div data-role="header" data-theme="c">
+            <a class="ui-btn-left ui-btn ui-icon-md-close ui-btn-icon-notext" href="#INSTALL"></a>
+            <h1 class="header-title">登入</h1>
+        </div>
+        <div data-role="content" style="padding: 15px">
+            <ul data-role="listview">
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNIN_USERNAME" placeholder="帳號" type="text" value="">
+                </li>
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNIN_PASSWORD" placeholder="密碼" type="password" value="">
+                </li>
+            </ul>
+            <a data-role="button" data-theme="c" id="SIGNIN_OK_BUTTON">確定</a>
+            <br>
+            <br>
+            <br>
+            <a id="Signin-ForgetPassword-Button" data-theme="b" data-role="button" href="#FORGOT_PASSWORD">忘記密碼</a>
+        </div>
+    </div>
+    <!-- ================================================== -->
+    <div data-role="page" id="SIGNUP">
+        <div data-role="header" data-theme="c">
+            <a class="ui-btn-left ui-btn ui-icon-md-close ui-btn-icon-notext" href="#INSTALL" id="SIGNUP_CANCEL_BUTTON"></a>
+            <h1 class="header-title">註冊新帳號</h1>
+        </div>
+        <div data-role="content" style="padding: 15px">
+            <ul data-role="listview">
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNUP_USERNAME" placeholder="帳號" type="text" value="">
+                </li>
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNUP_PASSWORD" placeholder="密碼" type="password" value="">
+                </li>
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNUP_CONFIRM_PASSWORD" placeholder="請再輸入一次密碼" type="password" value="">
+                </li>
+                <li class="ui-field-contain">
+                    <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="SIGNUP_EMAIL" placeholder="電子郵件" type="email" value="">
+                </li>
+            </ul>
+            <a data-role="button" data-theme="c" id="SIGNUP_OK_BUTTON">確定</a>
+        </div>
+    </div>
+    <!-- ================================================== -->
+    <div data-role="page" id="FORGOT_PASSWORD">
+        <div data-role="header" data-theme="c">
+            <a class="ui-btn ui-btn ui-icon-back ui-btn-icon-notext" href="#SIGNIN" id="FORGOT_PASSWORD_CANCEL_BUTTON"></a>
+            <h1 class="header-title">忘記密碼</h1>
+        </div>
+        <div data-role="content" style="padding: 15px">
+            <ul data-role="listview">
+                <ul data-role="listview">
+                    <p>
+                        請輸入帳號或是Email，系統會寄給您重設密碼的郵件，請依照郵件內容操作。
+                    </p>
+                    <li class="ui-field-contain">
+                        <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="FORGOT_PASSWORD_USERNAME" placeholder="請輸入帳號" type="text" value="">
+                    </li>
+                    <li class="ui-field-contain">
+                        <input data-clear-btn-text="" data-clear-btn="true" data-corners="false" id="FORGOT_PASSWORD_EMAIL" placeholder="請輸入 Email" type="email" value="">
+                    </li>
+                </ul>
+            </ul>
+            <a data-role="button" data-theme="c" id="FORGOT_PASSWORD_OK_BUTTON">確定</a>
+        </div>
+    </div>
+    <!-- ================================================== -->
+    <div data-role="page" id="MAIN_MENU">
+        <div data-role="header" data-theme="c">
+            <h1 class="header-title">MultiPageApp</h1>
+            <a data-role="button" id="MAIN_MENU_SIGNOUT_BUTTON">登出</a>
+        </div>
+        <div class="ui-content" role="main" style="padding: 15px">
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" src="scripts/systemSettings.js"></script>
+
+    <script type="text/javascript" src="scripts/ui/mainMenu.js"></script>
+    <script type="text/javascript" src="scripts/ui/install.js"></script>
+    <script type="text/javascript" src="scripts/ui/forgotPassword.js"></script>
+    <script type="text/javascript" src="scripts/ui/signin.js"></script>
+    <script type="text/javascript" src="scripts/ui/signup.js"></script>
+
+    <script type="text/javascript" src="scripts/app.js"></script>
+</body>
 </html>

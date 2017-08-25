@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.material.theme.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile.js"></script>
+  <script src="vendor/slick/slick.min.js"></script>
+  <style>
+    .image {
+      max-width: 100%;
+      min-height: 300px;
+      width: auto\9; /* ie8 */
+      background-size:   cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .image .message {
+      padding: 90px 0px 0px 0px;
+    }
+    .image .label {
+      color: #fff;
+      margin: 10px;
+      padding: 10px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <body>
+  <div data-role="page">
+    <div data-role="panel" data-display="push" id="sidebar">
+      <ul data-role="listview">
+        <li data-icon="false"><a data-ajax="false" href="index.html">Home</a></li>
+        <li data-icon="false"><a data-ajax="false" href="html/examples.html">Examples</a></li>
+        <li data-icon="false"><a data-ajax="false" href="html/custom/version.html">Version 1.0.1</a></li>
+      </ul>
+    </div>
+    <div data-role="content">
+      <div data-role="header" data-theme="c" style="background: none; !important; z-index: 100; border: none">
+        <!-- <h2>JQM Material Theme</h2> -->
+        <a href="#sidebar" style="background: none; !important; border: 0px" class="ui-btn-left ui-btn ui-icon-md-menu ui-btn-icon-notext"></a>
+      </div>
+
+      <div class="slider images" style="top: -45px; margin: 0 auto; max-width: 1300px">
+        <div>
+          <div class="image" style="background-image: url('img/material4.png')">
+            <div class="message">
+              <h2 class="label">Welcome to jQuery Mobile <br />Material Theme</h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="image" style="background-image: url('img/material1.png')"></div>
+        </div>
+        <div>
+          <div class="image" style="background-image: url('img/material2.png')"></div>
+        </div>
+        <div>
+          <div class="image" style="background-image: url('img/material3.png')"></div>
+        </div>
+      </div>
+
+      <!--
+      <div class="ui-padding">
+        <h3 class="ui-padding-off">Features</h3>
+        <ul>
+          <li>Easy to use and setup</li>
+          <li>Many build-in UI components</li>
+          <li>Works with all major mobile devices</li>
+          <li>Page transitions</li>
+          <li>Many demo pages included</li>
+          <li>Works on most tablets</li>
+          <li><a href="http://zavoloklom.github.io/material-design-iconic-font/icons.html">700+ beautiful material icons included</a></li>
+          <li>7 Different color schemes</li>
+          <li>PhoneGap Support</li>
+        </ul>
+      </div>
+
+      <div class="ui-padding">
+        <h3 class="ui-padding-off">Markup Examples</h3>
+        <p>
+          All UI components were carefully redesigned. Please check the examples below.
+        </p>
+      </div>
+      -->
+
+      <ul data-theme="a" data-role="listview" data-divider-theme="a">
+        <li>
+          <a href="html/markup/form.html" data-ajax="false">
+            <i class="ui-circle ui-circle-b">F</i>
+            Form Elements
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/buttons.html" data-ajax="false">
+            <i class="ui-circle ui-circle-g">R</i>
+            Regular Buttons
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/buttons-with-icons.html" data-ajax="false">
+            <i class="ui-circle ui-circle-b">B</i>
+            Buttons With Icons
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/clear-buttons.html" data-ajax="false">
+            <i class="ui-circle ui-circle-c">C</i>
+            Clear Buttons
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/small-buttons.html" data-ajax="false">
+            <i class="ui-circle ui-circle-e">S</i>
+            Small Buttons
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/full-width-buttons.html" data-ajax="false">
+            <i class="ui-circle ui-circle-f">F</i>
+            Full Width Buttons
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/cards.html" data-ajax="false">
+            <i class="ui-circle ui-circle-c">C</i>
+            Cards
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/switches.html" data-ajax="false">
+            <i class="ui-circle ui-circle-d">S</i>
+            Switches and sliders
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/collapsible.html" data-ajax="false">
+            <i class="ui-circle ui-circle-e">C</i>
+            Collapsible
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/selects.html" data-ajax="false">
+            <i class="ui-circle ui-circle-f">S</i>
+            Selects
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/themes.html" data-ajax="false">
+            <i class="ui-circle ui-circle-g">C</i>
+            Color Themes
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/panels.html" data-ajax="false">
+            <i class="ui-icon-md-laptop"></i>
+            Panels
+            </a>
+        </li>
+
+        <li>
+          <a href="html/markup/tables.html" data-ajax="false">
+            <i class="ui-icon-md-sync"></i>
+            Tables
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/listview.html" data-ajax="false">
+            <i class="ui-icon-md-school"></i>
+            Listviews
+          </a>
+        </li>
+
+        <li>
+          <a href="html/markup/dialogs.html" data-ajax="false">
+            <i class="ui-icon-md-radio-button-on"></i>
+            Dialogs and Popups
+          </a>
+        </li>
+      </ul>
+      <br />
+      <div class="ui-padding">
+        <h3 class="ui-padding-off">Custom Examples</h3>
+        <p>
+          We included couple custom examples to show you what is possilbe.
+        </p>
+      </div>
+
+      <ul data-role="listview"  data-divider-theme="a">
+        <li>
+          <a href="html/custom/contactus.html" data-ajax="false">
+            <i class="ui-icon-md-add"></i>
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a href="html/custom/slider.html" data-ajax="false">
+            <i class="ui-icon-md-sync"></i>
+            Slider
+          </a>
+        </li>
+
+        <li>
+          <a href="html/custom/profile.html" data-ajax="false">
+            <i class="ui-icon-md-person"></i>
+            Profile
+          </a>
+        </li>
+
+        <li>
+          <a href="html/custom/fonts.html" data-ajax="false">
+            <i class="ui-icon-md-settings"></i>
+            Fonts
+          </a>
+        </li>
+      </ul>
+      <br />
+    </div>
+    <br />
+    <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+      <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+    </div>
+  </div>
+  <!-- activate slider -->
+  <script>
+    $('.images').slick({
+      dots: true,
+      infinite: true,
+      lazyLoad: 'progressive',
+      slide: 'div',
+      speed: 300
+    });
+  </script>
+</body>
+</html>

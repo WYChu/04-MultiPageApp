@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.material.theme.css" />
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery.mobile.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+
+      <div data-role="panel" data-display="push" id="sidebar">
+        <ul data-role="listview">
+          <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../custom/version.html">Version 1.0.1</a></li>
+        </ul>
+      </div>
+
+      <div data-role="header" data-theme="d" data-tap-toggle="false">
+        <a href="#sidebar" class="ui-btn-left ui-btn ui-icon-md-menu ui-btn-icon-notext"></a>
+        <h1 class="header-title">Dialogs</h1>
+        <a data-ajax="false" href="../../index.html" data-icon="md-home" data-iconpos="notext" data-shadow="false"></a>
+      </div>
+
+      <div data-role="content" class="ui-padding">
+        <h2>Dialogs and Popups</h2>
+
+        <p></p>
+
+        <h3>Examples</h3>
+
+        <p>Basic Popup</p>
+
+        <a href="#popupBasic" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-a">Basic pop-up</a>
+        <div data-role="popup" id="popupBasic">
+            <p>This is a completely basic popup, no options set.</p>
+        </div>
+
+        <p>Menu Popup</p>
+
+        <a href="#popupMenu" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-c ui-icon-md-menu ui-btn-icon-right">Open menu</a>
+        <div data-role="popup" id="popupMenu" data-theme="a">
+            <ul data-role="listview" data-inset="true" style="min-width:250px;" data-corners="false">
+                <li data-role="list-divider" data-theme="d">What next?</li>
+                <li><a href="#">Share</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Delete</a></li>
+            </ul>
+        </div>
+
+        <p>Form Popup</p>
+
+        <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="slidedown" class="ui-btn  ui-btn-a ui-btn-inline ui-icon-md-person ui-btn-icon-left">
+          Log in
+        </a>
+        <div data-role="popup" id="popupLogin" data-theme="a" data-shadow="false">
+          <div role="main" class="ui-content ui-padding">
+            <a href="#" data-rel="back" class="ui-btn ui-btn-a ui-icon-md-close ui-btn-icon-notext ui-btn-right"></a>
+            <h2>Log in</h2>
+            <form>
+              <div class="ui-field-contain">
+                <div class="input-field">
+                  <input type="text" id="un" value="" />
+                  <label for="un">Username:</label>
+                </div>
+              </div>
+              <div class="ui-field-contain">
+                <div class="input-field">
+                  <input type="password" id="pw" value=""  />
+                  <label for="pw">Password:</label>
+                </div>
+              </div>
+              <button data-role="none" class="ui-btn ui-btn-d ui-clear ui-btn-inline">Sign in</button>
+              <button data-role="none" class="ui-btn ui-btn-c ui-clear ui-btn-inline">Log in</button>
+            </form>
+          </div>
+        </div>
+
+        <p>Full Dialog</p>
+        <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn  ui-btn-b ui-btn-inline ui-icon-md-delete ui-btn-icon-right">Delete document</a>
+        <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="a">
+            <div data-role="header" data-theme="b">
+                <h2 class="header-title">Delete document</h2>
+            </div>
+            <div role="main" class="ui-content ui-padding">
+              <h3 class="ui-title">Do you want to delete the document?</h3>
+              <p>This action cannot be undone.</p>
+              <a href="#" data-rel="back" class="ui-btn ui-btn-d ui-btn-inline">Cancel</a>
+              <a href="#" data-rel="back" data-transition="flow" class="ui-btn ui-btn-b ui-btn-inline ui-icon-md-delete ui-btn-icon-right">Delete</a>
+            </div>
+        </div>
+      </div>
+
+      <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+        <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(document).on('change', 'input, textarea', function () {
+          if($(this).val().length !== 0) {
+            $(this).parent('div').addClass('ui-active');
+          } else {
+            $(this).parent('div').removeClass('ui-active');
+          }
+        });
+      })
+    </script>
+  </body>
+</html>

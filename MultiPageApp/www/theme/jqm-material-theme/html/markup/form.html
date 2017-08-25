@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.material.theme.css" />
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.mobile.js"></script>
+      <script src="../../js/jquery.material.theme.js"></script>
+    </head>
+    <body>
+      <div data-role="page" >
+        <div data-role="panel" data-display="push" id="sidebar">
+          <ul data-role="listview">
+            <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+            <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+            <li data-icon="false"><a data-ajax="false" href="../custom/version.html">Version 1.0.1</a></li>
+          </ul>
+        </div>
+
+        <div data-role="header" data-theme="d" data-tap-toggle="false">
+          <a href="#sidebar" class="ui-btn-left ui-btn ui-icon-md-menu ui-btn-icon-notext"></a>
+          <h1 class="header-title">Form</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-padding">
+            <h3>Input Fields</h3>
+          </div>
+
+          <ul data-role="listview">
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="text" value=""
+                  data-clear-btn-text=""
+                  data-clear-btn="true">
+                <label>Title:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="password"
+                  value=""
+                  name="password"
+                  data-clear-btn-text=""
+                  data-clear-btn="true">
+                <label>Password:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+               <div class="input-field">
+                <input
+                  ata-corners="false"
+                  type="date"
+                  value=""
+                  data-clear-btn="true"
+                  data-clear-btn-text="">
+                <label>Date:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+               <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="datetime"
+                  value=""
+                  data-clear-btn="true"
+                  data-clear-btn-text=""
+                  placeholder="" />
+                <label>Datetime:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+                <div class="input-field">
+                  <input
+                    data-corners="false"
+                    type="email"
+                    value=""
+                    data-clear-btn="true"
+                    data-clear-btn-text=""
+                    placeholder="">
+                  <label>Email:</label>
+                </div>
+            </li>
+            <li class="ui-field-contain">
+               <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="month"
+                  value=""
+                  data-clear-btn="true"
+                  data-clear-btn-text=""
+                  placeholder="">
+                <label>Month:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="time"
+                  value=""
+                  data-clear-btn="true"
+                  data-clear-btn-text=""
+                  placeholder="">
+                <label>Time:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+               <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="url"
+                  value=""
+                  data-clear-btn="true"
+                  data-clear-btn-text=""
+                  placeholder="" />
+                <label>URL:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input data-corners="false" type="week" value="" placeholder="">
+                <label>Week:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <textarea data-corners="false" class="textarea"></textarea>
+                <label>Textarea:</label>
+              </div>
+            </li>
+          </ul>
+
+          <br />
+
+        </div>
+        <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+          <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+        </div>
+      </div>
+  </body>
+</html>

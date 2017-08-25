@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.material.theme.css" />
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery.mobile.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="panel" data-display="push" id="sidebar">
+        <ul data-role="listview">
+          <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../custom/version.html">Version 1.0.1</a></li>
+        </ul>
+      </div>
+
+      <div data-role="panel" data-display="push" id="panel1-push" data-theme="a">
+        <div class="ui-padding">
+          <h2>Left Panel</h2>
+          <p>
+            This panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.
+          </p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-d ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="reveal" id="panel1-reveal" data-theme="a">
+        <div class="ui-padding">
+          <h2>Left Panel</h2>
+          <p>
+            This panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.
+          </p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-d ui-outline ui-btn-inline ui-ico-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="overlay" id="panel1-overlay" data-theme="a">
+        <div class="ui-padding">
+          <h2>Left Panel</h2>
+          <p>
+            This panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.
+          </p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-d ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="push" id="panel2-push" data-position="right">
+        <div class="ui-padding">
+          <h2>Right Panel</h2>
+          <p>This Panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.</p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-b ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="overlay" id="panel2-overlay" data-position="right">
+        <div class="ui-padding">
+          <h2>Right Panel</h2>
+          <p>This Panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.</p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-b ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="reveal" id="panel2-reveal" data-position="right">
+        <div class="ui-padding">
+          <h2>Right Panel</h2>
+          <p>This Panel is located on the left side. To close, click on the button below, swipe to close or click off the panel.</p>
+          <button
+            data-rel="close"
+            class="ui-btn ui-btn-b ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+              Close Panel
+          </button>
+        </div>
+      </div>
+
+      <div data-role="panel" data-display="push" id="sidebar-left">
+        <ul data-role="listview">
+          <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+        </ul>
+
+        <button
+          data-rel="close"
+          class="ui-btn ui-btn-b ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+            Close Panel
+        </button>
+      </div>
+
+      <div data-role="panel" data-display="push" id="sidebar-right" data-position="right">
+        <ul data-role="listview">
+          <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+          <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+        </ul>
+
+        <button
+          data-rel="close"
+          class="ui-btn ui-btn-b ui-outline ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+            Close Panel
+        </button>
+      </div>
+
+      <div data-role="header" data-theme="d" data-tap-toggle="false">
+        <a href="#sidebar" class="ui-btn-left ui-btn ui-icon-md-menu ui-btn-icon-notext"></a>
+        <h1 class="header-title">Panels</h1>
+        <a data-ajax="false" href="../../index.html" data-icon="md-home" data-iconpos="notext" data-shadow="false"></a>
+      </div>
+
+      <div data-role="content" class="ui-padding">
+        <h2>Panels</h2>
+
+        <p>Flexible by design, panels can be used for navigation, forms, inspectors and more.</p>
+
+        <h3>Examples</h3>
+
+        <p>Left Panel Exanples</p>
+
+        <a
+          class="ui-btn ui-btn-inline ui-icon-md-menu ui-btn-icon-left"
+          href="#panel1-overlay">
+          Overlay
+        </a>
+
+        <a
+          class="ui-btn ui-btn-inline ui-icon-md-menu ui-btn-icon-left"
+          href="#panel1-reveal">
+          Reveal
+        </a>
+
+        <a
+          data-display="push"
+          class="ui-btn ui-btn-inline ui-icon-md-menu ui-btn-icon-left"
+          href="#panel1-push">
+          Push
+        </a>
+
+        <p>Right Panel Examples</p>
+
+        <a
+          class="ui-btn ui-btn-inline ui-btn-c ui-icon-md-menu ui-btn-icon-right"
+          href="#panel2-overlay">
+          Overlay
+        </a>
+
+        <a
+          class="ui-btn ui-btn-inline ui-btn-d ui-icon-md-menu ui-btn-icon-right"
+          href="#panel2-reveal">
+          Reveal
+        </a>
+
+         <a
+          class="ui-btn ui-btn-inline ui-btn-e ui-icon-md-menu ui-btn-icon-right"
+          href="#panel2-push">
+          Push
+        </a>
+
+        <p>Left sidebar with navigation</p>
+        <a
+          href="#sidebar-left"
+          class="ui-btn ui-btn-inline ui-icon-md-menu ui-btn-icon-left">
+          Open Panel
+        </a>
+
+        <p>Right sidebar with navigation</p>
+        <a
+          href="#sidebar-right"
+          class="ui-btn ui-btn-inline ui-btn-c ui-icon-md-menu ui-btn-icon-right">
+          Open Panel
+        </a>
+      </div>
+
+      <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+        <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

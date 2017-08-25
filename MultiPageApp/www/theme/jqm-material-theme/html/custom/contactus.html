@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.material.theme.css" />
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.mobile.js"></script>
+    </head>
+    <body>
+      <div data-role="page" >
+        <div data-role="panel" data-display="push" id="sidebar">
+          <ul data-role="listview">
+            <li data-icon="false"><a data-ajax="false" href="../../index.html">Home</a></li>
+            <li data-icon="false"><a data-ajax="false" href="../examples.html">Examples</a></li>
+            <li data-icon="false"><a data-ajax="false" href="./version.html">Version 1.0.1</a></li>
+          </ul>
+        </div>
+
+        <div data-role="header" data-theme="d" data-tap-toggle="false">
+          <a href="#sidebar" data-icon="md-menu" data-iconpos="notext" data-shadow="false"></a>
+          <h1 class="header-title">Contact Us</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-padding">
+            <h3 class="ui-padding-off">Contact Us</h3>
+          </div>
+
+
+          <ul data-role="listview">
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="text" value=""
+                  data-clear-btn-text=""
+                  data-clear-btn="true">
+                <label>Name:</label>
+              </div>
+            </li>
+            <li class="ui-field-contain">
+              <div class="input-field">
+                <input
+                  data-corners="false"
+                  type="text" value=""
+                  data-clear-btn-text=""
+                  data-clear-btn="true">
+                <label>Email:</label>
+              </div>
+            </li>
+          </ul>
+
+
+          <div class="ui-padding">
+            <div class="ui-right">
+              <button
+               class="ui-btn ui-btn-c ui-btn-inline ui-icon-md-done ui-btn-icon-left">
+               Send
+              </button>
+              <button
+               class="ui-btn ui-btn-b ui-btn-inline ui-icon-md-close ui-btn-icon-left">
+               Cancel
+              </button>
+            </div>
+          </div>
+          <br />
+
+        </div>
+        <div data-role="footer" data-tap-toggle="false" data-position="fixed">
+          <p class="ui-mini">Copyright <a href="http://ququplay.com">Ququplay LLC</a> All rights reserved.</p>
+        </div>
+      </div>
+  </body>
+</html>
